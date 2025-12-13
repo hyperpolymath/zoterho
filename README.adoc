@@ -1,0 +1,35 @@
+= Zoterho
+
+*Zotero ecosystem - Rhodium-compliant tools for bibliography management*
+
+== Components
+
+|===
+| Repo | Description
+
+| link:zoterho-template[zoterho-template]
+| Rhodium-compliant Zotero template
+
+| link:zotpress[zotpress]
+| Zotero to WordPress integration
+
+| link:zotero-voyant-export[zotero-voyant-export]
+| Zotero to Voyant Tools export
+
+| link:zotero-rescript-templater[zotero-rescript-templater]
+| ReScript template generator
+
+| link:zotero-nsai[zotero-nsai]
+| NSAI content detection
+
+|===
+
+== Quick Start
+
+```bash
+git clone --recursive https://github.com/hyperpolymath/zoterho.git
+```
+
+== License
+
+MIT OR Palimpsest-0.8
