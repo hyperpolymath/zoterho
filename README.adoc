@@ -32,4 +32,4 @@ git clone --recursive https://github.com/hyperpolymath/zoterho.git
 
 == License
 
-MIT OR Palimpsest-0.8
+MIT OR AGPL-3.0-or-later (with non-binding Palimpsest philosophical overlay)

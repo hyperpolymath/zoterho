@@ -16,7 +16,7 @@
 
 (define development-practices
   '((code-style (languages . ("unknown")) (formatter . "auto-detect") (linter . "auto-detect"))
-    (security (sast . "CodeQL") (credentials . "env vars only"))
+    (security (sast . "Semgrep") (credentials . "env vars only"))
     (testing (coverage-minimum . 70))
     (versioning (scheme . "SemVer 2.0.0"))))
 
