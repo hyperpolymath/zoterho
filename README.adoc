@@ -73,6 +73,25 @@ Initialize submodules if cloned without `--recursive`:
 git submodule update --init --recursive
 ----
 
+=== Development Setup
+
+This project uses https://github.com/casey/just[just] as its task runner (Makefile is banned per Hyperpolymath policy).
+
+[source,bash]
+----
+# Install just (if not already installed)
+cargo install just
+
+# Setup development environment
+just setup
+
+# View all available commands
+just --list
+
+# Run policy compliance check
+just check-policy
+----
+
 == Roadmap
 
 === Phase 1: Foundation
@@ -109,15 +128,22 @@ zoterho/
 │   │   ├── instant-sync.yml    # Forge propagation trigger
 │   │   ├── mirror.yml          # GitLab/Bitbucket mirroring
 │   │   ├── codeql-analysis.yml # Security scanning
-│   │   └── semgrep.yml         # Static analysis
+│   │   ├── semgrep.yml         # Static analysis
+│   │   └── policy-check.yml    # Language policy enforcement
 │   ├── dependabot.yml    # Dependency updates
 │   └── FUNDING.yml       # Sponsorship
+├── scripts/
+│   ├── check-policy.sh   # Policy enforcement script
+│   └── pre-commit        # Git pre-commit hook
 ├── zoterho-template/     # [submodule] Zotero config template
 ├── zotpress/             # [submodule] WordPress integration
 ├── zotero-voyant-export/ # [submodule] Voyant Tools export
 ├── zotero-rescript-templater/ # [submodule] Plugin scaffolding
 ├── zotero-nsai/          # [submodule] AI content detection
 ├── .gitmodules           # Submodule definitions
+├── deno.json             # Deno configuration
+├── justfile              # Task runner (replaces Makefile)
+├── Mustfile.ncl          # Nickel contract for policy enforcement
 ├── MIT_LICENSE.txt       # License
 └── README.adoc           # This file
 ----

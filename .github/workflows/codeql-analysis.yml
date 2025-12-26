@@ -1,4 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
+# Hyperpolymath Language Policy Compliant
+# Banned: javascript-typescript, go (see .claude/CLAUDE.md)
+# Allowed: python (SaltStack only), rust (not yet supported by CodeQL)
 name: "CodeQL"
 
 on:
@@ -24,12 +27,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - language: javascript-typescript
-            build-mode: none
+          # Python allowed for SaltStack only
           - language: python
             build-mode: none
-          - language: go
-            build-mode: autobuild
+          # Note: Rust is not yet supported by CodeQL
+          # Use cargo-audit and semgrep for Rust security scanning
 
     steps:
     - name: Checkout repository
